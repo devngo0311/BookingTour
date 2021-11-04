@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="../jquery/jquery.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    welcome to admin page
+    <button id="logout">Logout</button>
+</body>
+<script>
+    $('#logout').click(function() {
+        document.cookie = "token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+        window.location.href = '/loginAdmin';
+        return false;
+    });
+</script>
+
+</html>

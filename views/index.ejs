@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    chào mừng bạn đến với trang web đặt tour du lịch của chúng tôi, đây là trang chủ
+    <button id="login">Login</button>
+    <button id="register">register</button>
+    <button id="booktour">Book tour</button>
+
+</body>
+<script>
+    $('#login').click(function() {
+        window.location.href = '/login';
+        return false;
+    });
+
+    $('#register').click(function() {
+        window.location.href = '/register';
+        return false;
+    });
+    $('#booktour').click(function() {
+        window.location.href = '/booking';
+        return false;
+    });
+</script>
+
+</html>
