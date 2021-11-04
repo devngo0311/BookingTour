@@ -110,7 +110,7 @@ exports.authRegister = async(req, res) => {
 
 
 
-exports.createUser = (g_user, callback) => {
+createUser = (g_user, callback) => {
     g_user.save((err, result) => {
         if (err) callback(err, null);
         else {
@@ -119,7 +119,7 @@ exports.createUser = (g_user, callback) => {
     })
 };
 
-exports.find_user = ({ username }, callback) => {
+find_user = ({ username }, callback) => {
     usermodel.findOne({ userName: username }, (err, result) => {
         if (err) callback(err, null);
         else {
