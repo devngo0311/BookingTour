@@ -3,7 +3,7 @@ $(function() {
     $("#submit").on("click", function() {
 
         $.ajax({
-                url: '/registerAdmin',
+                url: '/user/registerAdmin',
                 type: 'POST',
                 data: {
                     username: $('#username').val(),

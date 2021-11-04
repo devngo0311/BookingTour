@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const myDbName = "userBooking";
+const myDbName = "bookingTourBD";
 
 async function connect() {
     try {
         await mongoose.connect('mongodb://localhost:27017/' + myDbName);
-        console.log("connect succesful!!!");
+        console.log("connect succesfuly!!!");
     } catch (error) {
         console.log("connnect failure!!!");
     }

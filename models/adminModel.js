@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const userSchema = new mongoose.Schema({
+const adminSchema = new mongoose.Schema({
     username: {
         type: String,
         required: [true, "Vui long nhap username"],
@@ -15,5 +15,4 @@ const userSchema = new mongoose.Schema({
     },
 });
 
-const adminmodel = mongoose.model("admin", userSchema);
-module.exports = adminmodel;
+module.exports = mongoose.model('admin', adminSchema);

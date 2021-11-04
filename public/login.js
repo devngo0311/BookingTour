@@ -24,7 +24,7 @@ $(function() {
 
     $("#login").on("click", function() {
         $.ajax({
-                url: '/login',
+                url: '/user/login',
                 type: 'POST',
                 data: {
                     username: $('#username').val(),

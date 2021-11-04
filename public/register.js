@@ -2,7 +2,7 @@ $(function() {
 
     $("#submit").on("click", function() {
         $.ajax({
-                url: '/register',
+                url: '/user/register',
                 type: 'POST',
                 data: {
                     username: $('#username').val(),

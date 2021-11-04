@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const $ = require("jquery");
 const cookieParser = require('cookie-parser');
-const routes = require("./routes/route.js");
 
 const app = express();
 // connect DB
@@ -20,8 +19,15 @@ app.use("/jquery", express.static(path.join(__dirname + "/node_modules/jquery/di
 app.use(express.static(path.join(__dirname + "/public")));
 
 // default page load
-routes(app);
+app.get("/", (req, res) => {
+    res.redirect("/user/home");
+});
+
+app.use("/booking", require("./routes/booking.js"));
+app.use("/tour", require("./routes/tour.js"));
+app.use("/user", require("./routes/user.js"));
+
 
 //assign port
-const port = process.env.PORT || 3005;
-app.listen(port, () => console.log("server run port " + port));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log("server is runing port " + port));
