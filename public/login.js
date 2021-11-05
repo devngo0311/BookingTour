@@ -34,7 +34,7 @@ $(function() {
                 if (data.message == 'Valid password') {
                     alert("đăng nhập thành công");
                     setCookie('token', data.token, 1);
-                    window.location.href = '/booking';
+                    window.location.href = '/user/booking';
                     return false;
                 }
             })

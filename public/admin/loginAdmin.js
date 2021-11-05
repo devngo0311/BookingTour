@@ -24,7 +24,7 @@ $(function() {
 
     $("#login").on("click", function() {
         $.ajax({
-                url: '/user/loginAdmin',
+                url: '/admin/loginAdmin',
                 type: 'POST',
                 data: {
                     username: $('#username').val(),
@@ -34,7 +34,7 @@ $(function() {
                 if (data.message == 'Valid password') {
                     alert("đăng nhập thành công");
                     setCookie('token', data.token, 1);
-                    window.location.href = '/user/adminpage';
+                    window.location.href = '/admin/adminpage';
                     return false;
                 }
             })
@@ -45,7 +45,7 @@ $(function() {
     })
 
     $('#home').on("click", function() {
-        window.location.href = '/user';
+        window.location.href = '/admin';
         return false;
     })
 })

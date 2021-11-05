@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <script src="/jquery/jquery.js"></script>
+    <script src="../jquery/jquery.js"></script>
     <link rel="stylesheet" href="/styles.css" />
 </head>
 
@@ -15,13 +15,29 @@
     welcome, vào đây để đặt tour
 
     <button id="logout">Logout</button>
+    <button id="xoa">delete cookie</button>
+    <h1 id="tt">here</h1>
 </body>
 <script>
     $('#logout').click(function() {
-        document.cookie = "token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
-        window.location.href = '/login';
+        document.cookie = "token=; expires = Thu, 01 Jan 1970 00:00:00 GMT;";
+        window.location.href = '/user/login';
         return false;
     });
+    $('#xoa').click(function() {
+        alert("push")
+
+        document.cookie = "token=; expires = Thu, 01 Jan 1970 00:00:00 GMT;";
+        document.getElementById("tt").innerHTML = "hello";
+        window.location.href = '/user/booking';
+
+        return false;
+
+    });
+
+    function deleteCookie(name) {
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    };
 </script>
 
 </html>

@@ -14,7 +14,7 @@ $(function() {
             }).then(data => {
                 if (data.msg == 'Success') {
                     alert("Tạo tài khoản thành công");
-                    window.location.href = '/login';
+                    window.location.href = '/user/login';
                     return false;
                 }
                 if (data.msg == 'User exist') {

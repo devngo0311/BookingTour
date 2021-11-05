@@ -85,6 +85,7 @@ exports.authRegister = async(req, res) => {
             sdt: req.body.sdt,
             email: req.body.email
         });
+        console.log(users);
         await find_user({ username }, async(err, user) => {
             if (err) {
                 res.status(500).json({ msg: "error" + err });
@@ -107,9 +108,14 @@ exports.authRegister = async(req, res) => {
     }
 
 };
+//end body
+
+<<<<<<< HEAD
 
 
-
+=======
+//static method
+>>>>>>> f96f26d (upp)
 createUser = (g_user, callback) => {
     g_user.save((err, result) => {
         if (err) callback(err, null);

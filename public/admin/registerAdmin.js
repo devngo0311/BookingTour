@@ -3,7 +3,7 @@ $(function() {
     $("#submit").on("click", function() {
 
         $.ajax({
-                url: '/user/registerAdmin',
+                url: '/admin/registerAdmin',
                 type: 'POST',
                 data: {
                     username: $('#username').val(),
@@ -14,7 +14,7 @@ $(function() {
             .then(data => {
                 if (data.msg == 'Success') {
                     alert("Tạo tài khoản thành công");
-                    window.location.href = '/loginAdmin';
+                    window.location.href = '/admin/loginAdmin';
                     return false;
                 }
                 if (data.msg == 'User exist') {

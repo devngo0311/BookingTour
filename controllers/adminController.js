@@ -13,6 +13,11 @@ exports.login = (req, res) => {
 exports.register = (req, res) => {
     res.render('admin/registerAdmin');
 };
+//get
+exports.tourManager = (req, res) => {
+    res.render('admin/tourManager');
+};
+
 
 //get
 exports.authCookies = (req, res) => {
@@ -118,7 +123,9 @@ exports.authRegister = async(req, res) => {
     }
 };
 
+//end body
 
+//static method
 createUser = (g_user, callback) => {
     g_user.save((err, result) => {
         if (err) callback(err, null);

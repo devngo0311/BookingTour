@@ -8,19 +8,40 @@
     <title>Index Admin</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <script src="../jquery/jquery.js"></script>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="../admin/styles.css" />
 </head>
 
 <body>
     welcome to admin page
+
+    <ul class="nav">
+        <li>
+            <a href="#">Quản Lý Tour</a>
+            <ul class="sub-menu">
+                <li><a href="/admin/adminpage/addtour">Thêm tour</a></li>
+                <li> <a href="#">Menu số 2.2</a></li>
+                <li><a href="#">Menu số 2.3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Quản Lý Khách Hàng</a>
+            <ul class="sub-menu">
+                <li><a href="#">Menu số 2.1</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
     <button id="logout">Logout</button>
 </body>
 <script>
     $('#logout').click(function() {
+        window.location.href = '/admin/loginAdmin';
         document.cookie = "token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
-        window.location.href = '/loginAdmin';
+
         return false;
     });
 </script>
+
 
 </html>

@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const $ = require("jquery");
 const cookieParser = require('cookie-parser');
-
 const app = express();
 // connect DB
 const connect = require('./DBConnect/connect');
@@ -22,10 +21,10 @@ app.use(express.static(path.join(__dirname + "/public")));
 app.get("/", (req, res) => {
     res.redirect("/user/home");
 });
-
 app.use("/booking", require("./routes/booking.js"));
 app.use("/tour", require("./routes/tour.js"));
 app.use("/user", require("./routes/user.js"));
+app.use("/admin", require("./routes/admin.js"));
 
 
 //assign port
